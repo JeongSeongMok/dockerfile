@@ -6,8 +6,9 @@ RUN apt-get install -y git
 RUN useradd -r -u 123 JeongSeongMok
 
 RUN set -xe \ 
-    && apt -y -qq install sudo tmux
+    && apt -y -qq install vim sudo tmux
 
+# .tmux.conf 
 RUN git clone https://github.com/JeongSeongMok/tmux-mok
 RUN set -xe \
     && cd tmux-mok \
